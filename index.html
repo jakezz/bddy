@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat with GPT-3</title>
+    <link rel="stylesheet" type="text/css" href="/css/ide.css">
+    <script src="/js/chatgpt.js"></script>
+</head>
+<body>
+    <div id="chatbox">
+        <div id="messages"></div>
+        <input id="userInput" type="text" placeholder="Type your message here..." />
+        <button id="sendButton">Send</button>
+    </div>
+    <div id="ide">
+        <textarea id="codeInput" placeholder="Type your code here..."></textarea>
+        <button id="runButton">Run</button>
+        <div id="codeOutput"></div>
+    </div>
+    <script>
+        document.getElementById('sendButton').addEventListener('click', function() {
+            var userInput = document.getElementById('userInput').value;
+            // TODO: Add code here to send userInput to the AI and get a response
+            var aiResponse = "This is a placeholder response from the AI.";
+            document.getElementById('messages').innerHTML += "<p>User: " + userInput + "</p><p>AI: " + aiResponse + "</p>";
+            document.getElementById('userInput').value = "";
+        });
+        document.getElementById('runButton').addEventListener('click', function() {
+            var codeInput = document.getElementById('codeInput').value;
+            // TODO: Add code here to run codeInput and display the output
+            var codeOutput = "This is a placeholder output from the code.";
+            document.getElementById('codeOutput').innerHTML = "<p>" + codeOutput + "</p>";
+            document.getElementById('codeInput').value = "";
+        });
+    </script>
+    <script src="/js/ide.js"></script>
+</body>
+</html>
